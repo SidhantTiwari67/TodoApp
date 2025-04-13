@@ -4,6 +4,7 @@ WORKDIR /app
 COPY --chown=gradle:gradle . .
 RUN gradle build -x test
 
+
 # Stage 2: Run the application
 FROM openjdk:19-jdk-slim
 WORKDIR /app
